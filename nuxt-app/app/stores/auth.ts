@@ -1,3 +1,4 @@
+//por marcos 
 import { defineStore } from 'pinia'
 import type { UserProfile, RegisterPayload, UserBadge } from './types'
 
