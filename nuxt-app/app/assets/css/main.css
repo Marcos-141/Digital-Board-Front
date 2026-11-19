@@ -1,0 +1,83 @@
+:root {
+  --db-bg: #f3f4e5;
+  --db-surface: #ffffff;
+  --db-accent: #a1c1be;
+  --db-primary: #a1c1be;
+  --db-primary-dark: #89aba8;
+  --db-secondary: #e2e3d9;
+  --db-secondary-dark: #c9caa8;
+  --db-text: #59554e;
+  --db-text-muted: rgba(89, 85, 78, 0.75);
+  --db-border: #e2e3d9;
+  --db-radius: 16px;
+  --db-shadow-sm: 0 2px 8px rgba(89, 85, 78, 0.06);
+  --db-shadow-md: 0 6px 16px rgba(89, 85, 78, 0.08);
+}
+
+html,
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  background-color: var(--db-bg) !important;
+  color: var(--db-text) !important;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.v-application {
+  font-family: 'Outfit', sans-serif !important;
+  background-color: var(--db-bg) !important;
+  color: var(--db-text) !important;
+}
+
+/* Global utility classes */
+.text-muted {
+  color: var(--db-text-muted) !important;
+}
+
+.border-soft {
+  border: 1px solid var(--db-border) !important;
+}
+
+.rounded-card {
+  border-radius: var(--db-radius) !important;
+}
+
+.user-content {
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+/* Card hover animation with accessibility respect */
+.card-interactive {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-interactive:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--db-shadow-md) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-interactive:hover {
+    transform: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--db-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--db-accent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--db-primary-dark);
+}
